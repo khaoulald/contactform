@@ -110,32 +110,34 @@ if (isset($_POST["submit"])) {
 }  
 
 function getShortcode(){
+
     if(get_option('wp_contact_firstname') == 'on'){
-        echo ' <input type="text" placeholder = "first name">';
+        echo ' <input type="text" style="margin-bottom: 20px;" placeholder = "first name">';
     }
     if(get_option('wp_contact_lastname') == 'on'){
-        echo '<input type="text" placeholder = "last name">';
+        echo '<input type="text" style="margin-bottom: 20px;" placeholder="last name">';
     }
     if(get_option('wp_contact_adress') == 'on'){
-        echo ' <input type="text" placeholder = "Adress">';
+        echo ' <input type="text" style="margin-bottom: 20px;" placeholder = "Adress">';
     }
     if(get_option('wp_contact_phone') == 'on'){
-        echo ' <input type="text" placeholder = "phone">';
+        echo ' <input type="text" style="margin-bottom: 20px;" placeholder = "phone">';
     }
     if(get_option('wp_contact_city') == 'on'){
-        echo '<input type="text" placeholder = "city">';
+        echo '<input type="text" style="margin-bottom: 20px;" placeholder = "city">';
     }
     if(get_option('wp_contact_email') == 'on'){
-        echo ' <input type="text" placeholder = "email">';
+        echo ' <input type="text" style="margin-bottom: 20px;" placeholder = "email">';
     }
     if(get_option('wp_contact_subject') == 'on'){
-        echo ' <input type="text" placeholder = "subject">';
+        echo ' <input type="text" style="margin-bottom: 20px;" placeholder = "subject">';
     }
     if(get_option('wp_contact_message') == 'on'){
-        echo ' <input type="text" placeholder = "message">';
+        echo ' <input type="text" style="margin-bottom: 20px;" placeholder = "message">';
     }
-    echo'<button>Submit</button>';
+    echo'<button style="width:100%;">Submit</button>';
 }
+
 
 add_shortcode('input','getShortcode');
 ?>
